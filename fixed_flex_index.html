@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width="1170">
+    <title>Document</title>
+
+    <style>
+    
+        header,
+        footer {
+            flex: 0 0 content;
+            background: lightgray;
+        }
+    
+        header {
+            display: flex;
+            justify-content: center;
+            width: 1170px;
+        }
+
+        body {
+            display: flex;
+            flex-flow: column;
+            justify-content: stretch;
+            min-width: 1170px;   
+        }
+    
+        main {
+            display: flex;
+            flex-direction: row;
+            width: 1170px;
+        }
+    
+        .container {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 90%;
+            min-height: 60vh;
+            margin: 0 auto;
+            padding: 20px 0;
+            background-color: lightyellow;
+        }
+    
+        .title {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-basis: calc(100%/3);
+            width: 50vw;
+        }
+    
+        .box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 750px;
+            height: 60px;
+        }
+    
+        .box-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items:center;
+            width: 49%;
+            height: 100%;
+            background-color: lightsalmon;
+        }
+
+        .item-special {
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            width: 750px;
+            height: 60px;
+            background-color: lightsalmon;
+        }
+    
+        aside {
+            display: flex;
+            flex-flow: row;
+            justify-content:center;
+            min-width: 10%;
+            background-color: lightgreen;
+        }
+    
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            flex-basis: 60px;
+            width: 1170px;
+        }
+
+        .foot {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-basis: 150px; 
+            margin: 10px 0 10px 0; 
+            background-color: white;
+        }
+        
+    </style>
+</head>
+
+<body>  
+    <header><h4>Шапка Страницы</h4></header>
+
+    <main class="main">
+        <section class="container">
+            <h4 class="title">[Основная часть]</h4>
+            <div class="box">
+                <div id="one-item" class="box-item">Еще одно</div>
+                <div id="two-item" class="box-item">Еще Второе</div>
+            </div>
+            <div class="item-special">И Третье</div>
+        </section>
+
+    <aside>
+        <h4 class="aside">
+            [Боковая область]
+        </h4>
+    </aside>
+    </main>
+
+    <footer>
+        <div class="foot">[Секция футера 1]</div>
+        <div class="foot">[Секция футера 2]</div>
+        <div class="foot">[Секция футера 3]</div>
+        <div class="foot">[Секция футера 4]</div>
+    </footer>
+</body>
+
+</html>
