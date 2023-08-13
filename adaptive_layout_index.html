@@ -6,6 +6,7 @@
     <title>layout</title>
     <style>
       * {
+        margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
@@ -13,9 +14,10 @@
       body {
         display: grid;
         grid-template-rows: 1fr;
-        margin-left: 2vw;
-        margin-right: 2vw;
+        
       }
+
+      /* first page */
 
       .head_container {
         display: grid;
@@ -23,6 +25,8 @@
         grid-template-columns: 1fr 1fr;
         width: 1171px;
         height: 33px;
+        margin-left: 2vw;
+        margin-right: 2vw;
       }
 
       .nav {
@@ -43,10 +47,11 @@
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
         gap: 15px;
+        margin-left: 2vw;
       }
-
-      .title_container {
-        align-self: self-end;
+/* текст оранжевого цвета */
+      .title_container {        
+        align-self: self-start;
         margin-top: 15px;
         color: #ff9401;
         font-family: Gilroy;
@@ -65,7 +70,7 @@
         font-weight: 800;
         line-height: 108px;
       }
-
+/* основной текст мелкий */
       .text_main,
       .text_main-2 {
         width: 497px;
@@ -86,6 +91,8 @@
         color: white;
         font-size: 18px;
         font-weight: 600 ;
+        margin-top: 50px;
+
       }
 
       .sidebar_img {
@@ -108,23 +115,27 @@
         height: 30px;
       }
 
+      /* first page end  */
+
+      /* second page start  */
       .container-2 {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         gap: 15px;
         width: 1200px;
-        height: 600px;
-        margin-top: 100px;
+        height: 400px;
+        margin-top: 20px;
         background: linear-gradient(lightyellow , white);
       }
 
       .text-in-the-container-2 {
-        display: grid;
-        grid-template-rows: repeat(7, 1fr);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         gap: 15px;
         margin-left: 200px;
-        margin-right: -50px;
+        margin-right: 50px;
       }
 
       .text_line-2 {
@@ -137,11 +148,15 @@
       }
 
       .left-image {
-        background-repeat: no-repeat;
-        background-size: 600px;
-        margin: 0 -50px;
+        display: flex;
+        flex-direction: row;
       }
 
+       /* second page end  */
+
+       
+      
+      
       /* third page */
 
       .container-3 {
@@ -209,8 +224,10 @@
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
+        margin-bottom: 25px;
       }
 
+      /* fourth page */
       .container-4 {
         display: flex;
         flex-direction: column;
@@ -259,8 +276,9 @@
         border-radius: 15px;
         color: gray;
         background: rgba(196, 196, 196, 0.26);
-        margin-left: 8px;    
-        margin-bottom: 10px;
+        margin-left: 8px;  
+        margin-top: 20px;   
+        margin-bottom: 30px;
       }
 
       .button_below {
@@ -271,8 +289,251 @@
         color: white;
         font-size: 18px;
         font-weight: 600 ;
+        margin-bottom: 50px;
       }
       
+      @media screen and (max-width: 415px) {
+
+
+.main {
+display: grid;
+grid-template-columns: 1fr 1fr;
+width: 400px;
+}
+
+.container {
+display: grid;
+grid-template-rows: 1fr;
+grid-template-columns: 1fr;
+background: url(./assets/images/pizza.png);
+background-position: right 65% bottom 55%; 
+}
+
+.text_line,
+.text_line-2 {
+color: #232323;
+font-family: Gilroy;
+font-size: 56px;
+font-style: normal;
+font-weight: 800;
+}
+
+.text_main,
+.text_main-2 {
+width: 400px;
+height: 71px;
+color: #191919;
+font-family: Circular Std;
+font-size: 20px;
+font-style: normal;
+font-weight: 450;
+line-height: 160%;
+}
+
+.button {
+width: 200px;
+height: 62px;
+border-radius: 31px;
+background: #ff9401;
+color: white;
+font-size: 18px;
+font-weight: 600 ;
+margin-top: 140px;
+}
+
+/* вторая страница не получилась */
+.container-2 {  
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 15px;
+  width: 400px;
+  height: 750px;
+  background: linear-gradient(lightyellow , white);
+}
+
+.text-in-the-container-2 {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 400px;
+  gap: 15px;
+}
+    
+.title_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 15px;
+  color: #ff9401;
+  font-family: Gilroy;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  margin-left: -100px;
+}
+
+.text_line-2 {
+  display: flex;
+  flex-direction: row;
+  color: #2e2e2e;
+  font-family: Gilroy;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  margin-left: -100px;
+}
+
+.text_main-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: -100px;
+}
+
+.container-3 {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        min-height: 1050px;
+        padding-top: 100px;
+      }
+
+      .flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #ff9401;
+        font-family: Gilroy;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        
+      }
+
+      .flex_t {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #2E2E2E;
+        font-family: Gilroy;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+      }
+
+      .box-master {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+      }
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        max-width: 376px;
+        align-items: center;
+        text-align: center;
+      }
+
+      p {
+        margin-top: -10px;
+        color: #3f3232;
+        font-family: Circular Std;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 450;
+        line-height: 160%;
+      }
+
+      h5 {
+        color: #2e2e2e;
+        font-family: Gilroy;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        margin-bottom: 25px;
+      }
+
+      .container-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        min-height: 1050px;
+        padding-top: 60px;
+        background: linear-gradient(lightyellow , white);
+        
+      }
+
+      .box-master-kimchi {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+      }
+
+      .box-kimchi {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-color: white;
+        max-height: 500px;
+      }
+
+      .box-kimchi > img {
+        width: 300px;
+        padding: 8px;
+      }
+
+      h6 {
+        color: #2e2e2e;
+        font-family: Gilroy;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .button_gray {
+        width: 110px;
+        height: 30px;
+        border-radius: 15px;
+        color: gray;
+        background: rgba(196, 196, 196, 0.26);
+        margin-left: 8px;   
+        margin-top: 20px; 
+        margin-bottom: 30px;
+      }
+
+      .button_below {
+        width: 243px;
+        height: 62px;
+        border-radius: 31px;
+        background: #ff9401;
+        color: white;
+        font-size: 18px;
+        font-weight: 600 ;
+        margin-top: -50px;
+        margin-bottom: 30px;
+      }
+
+
+}
+
+
+
     </style>
   </head>
 
@@ -295,9 +556,9 @@
         -->
         <div class="container">
           <div class="title_container">__Restaurant</div>
-          <div class="text_line">
-            Good Food <br >
-            Good Mood
+          <div class="text_1page">
+            <p class="text_line" id="first_line">Good Food</p>
+            <p class="text_line" id="second_line" >Good Mood</p>
           </div>
           <!-- <div class="text_line">Good Mood</div> -->
           <div class="text_main">
@@ -332,21 +593,23 @@
     </header>
 
     <div class="container-2">
-      <div
-        class="left-image"
-        style="background-image: url(./assets/images/kimchi.png)"
-      ></div>
+
+    
+      <img class="left-image" src="./assets/images/kimchi.png"></img>
+      
       <div class="text-in-the-container-2">
         <div class="title_container">About us</div>
         <div class="text_line-2">
           Simple Way of<br >
           Eating Delicious
         </div>
+
         <div class="text_main-2">
           Keep healthy food readily available. When you <br >get hungry, you’re
           more likely to eat the first <br >thing you see on the counter or in
           the
         </div>
+
         <button class="button">Explore Our Story</button>
       </div>
     </div>
